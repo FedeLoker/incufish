@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Example</title>
+</head>
+<body>
+  <h1>WebSocket Example</h1>
+  <form onsubmit="sendData(); return false;">
+    <label for="bot_token">Telegram Bot Token:</label>
+    <input type="text" id="bot_token" name="bot_token"><br><br>
+
+    <label for="bot_token">Google Script ID:</label>
+    <input type="text" id="bot_token" name="bot_token"><br><br>
+
+    <label for="l1temp">Incu01</label>
+    <input type="text" id="l1temp" name="l1temp" placeholder="Temperatura">
+    <input type="text" id="l1temp" name="l1temp" placeholder="Tolerancia"><br><br>
+
+    <label for="l2temp">Incu02</label>
+    <input type="text" id="l2temp" name="l2temp" placeholder="Temperatura">
+    <input type="text" id="l2tol" name="l2tol" placeholder="Tolerancia"><br><br>
+
+    <label for="l3temp">Incu03</label>
+    <input type="text" id="l3temp" name="l3temp" placeholder="Temperatura">
+    <input type="text" id="l3tol" name="l3tol" placeholder="Tolerancia"><br><br>
+
+    <label for="l4temp">Incu04</label>
+    <input type="text" id="l4temp" name="l4temp" placeholder="Temperatura">
+    <input type="text" id="l4tol" name="l4tol" placeholder="Tolerancia"><br><br>
+
+
+    <input type="submit" value="Guardar">
+  </form>
+
+  <p id="received-data"></p>
+
+  <script>
+    var serverIP = ""
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        serverIP  = "ws://" + this.responseText + ":81/";
+      }
+    };
+    xhr.open("GET", "/ip", true);
+    xhr.send();
+
+    var socket = new WebSocket(serverIP); // Replace with your ESP8266 IP address
+    socket.onopen = function() {
+      console.log("Connected to server");
+    };
+    socket.onmessage = function(event) {
+      console.log("Received message: " + event.data);
+      var receivedData = document.getElementById("received-data");
+      receivedData.textContent = event.data;
+    };
+    function sendData() {
+      var message = document.getElementById("message").value;
+      socket.send(message);
+    }
+
+    
+
+  </script>
+</body>
+</html>

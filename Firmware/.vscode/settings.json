@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "*.csv": "csv (pipe)",
+        "compare": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "numeric": "cpp",
+        "ranges": "cpp",
+        "*.tcc": "cpp",
+        "cmath": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/lib/ESPAsyncWebServer-master"
+}
