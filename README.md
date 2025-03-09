@@ -1,2 +1,6 @@
-# incufish
-Incufish project
+# Design and development of innovative incubators that optimize the incubation temperature of fish eggs.
+
+This repository contains the code for the paper "Design and development of innovative incubators that optimize the incubation temperature of fish eggs"
+
+## Abstract
+The Fish is the most widely produced ornamental fish globally. Under controlled conditions, spawning of up to 10,000 eggs per female has been recorded. However, the risk of productive losses increases with mass egg production. Temperature is one of the two most critical factors in larval development. Consequently, two incubation devices were designed and developed to maintain various experimental temperatures consistently across different containers. The first device, employing Peltier technology, aimed to develop portable incubators. It recorded average temperatures of 14.65°C per hour of operation; following adjustments, this was improved to an average of 7.3°C per hour. The second device, a double-layer closed-loop system, maintained average temperatures of 6.2°C, 11.7°C, 17.7°C, and 23.5°C in their respective incubators, with fluctuations of less than one degree, except during the manipulation of biological material. Peltier technology proved to be promising for future research, while the double-layer technology demonstrated precision and efficiency, capable of scalability and traceability.
